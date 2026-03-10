@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrien Lutz — En construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0b0b;
+            --accent: #f4f3ef;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            letter-spacing: -0.04em;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 3rem;
+        }
+        .loader {
+            width: 40px;
+            height: 2px;
+            background: rgba(244, 243, 239, 0.1);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .loader::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            width: 50%;
+            height: 100%;
+            background: var(--accent);
+            animation: lineAnim 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes lineAnim {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+        .contact-hint {
+            position: fixed;
+            bottom: 2rem;
+            font-size: 0.7rem;
+            opacity: 0.3;
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.3s;
+        }
+        .contact-hint:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p>Portfolio d'ingénierie</p>
+        <h1>Site en cours<br>de création</h1>
+        <div class="loader"></div>
+    </div>
+
+    <a href="mailto:adrien.lutz@student-cs.fr" class="contact-hint">adrien.lutz@student-cs.fr</a>
+
+</body>
+</html>
